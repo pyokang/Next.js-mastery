@@ -1,7 +1,5 @@
 # Linting
 
----
-
 Linting is process of analyzing code for potential errors, bugs and stylistic issues.
 It provides many benefits including:
 
@@ -12,8 +10,6 @@ It provides many benefits including:
 Two common linting tools in modern javascript development are `ESLint` and `Prettier`. These too tools are very similar, yet slightly different.
 
 # ESLint
-
----
 
 > **ESLint**
 >
@@ -41,8 +37,6 @@ ESLint provides detailed error messages that help developers understand the natu
 
 # Prettier
 
----
-
 > **Prettier**
 >
 > Prettier enforces a consistent code style (i.e. code formatting that won’t affect the AST _Abstract Syntax Tree_) across your entire codebase because it disregards the original styling by parsing it away and re-printing the parsed AST with its own rules that take the maximum line length into account, wrapping code when necessary.
@@ -66,15 +60,11 @@ Prettier does not provide error messages related to code quality or coding stand
 
 # Configuration
 
----
-
 #### Requirements
 
-**Node.js (^12.22.0, ^14.17.0, or >=16.0.0) with SSL support**
+Node.js (^12.22.0, ^14.17.0, or >=16.0.0) with SSL support
 
 ## Steps
-
----
 
 1. Install `eslint` and `prettier` to the project as dev dependency
 
