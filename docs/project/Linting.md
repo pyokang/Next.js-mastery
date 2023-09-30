@@ -7,7 +7,9 @@ It provides many benefits including:
 - Improved code quality
 - Catch common mistakes early in development
 
-Two common linting tools in modern javascript development are `ESLint` and `Prettier`. These too tools are very similar, yet slightly different.
+Two common linting tools in modern javascript development are [ESLint](#eslint) and [Prettier](#prettier). These too tools are very similar, yet slightly different.
+
+If you are just interested in the configuration, jump to [Configuration](#configuration)
 
 # ESLint
 
@@ -112,3 +114,46 @@ touch .eslintrc.json
   }
 }
 ```
+
+# Recommendation
+
+### beginner
+
+If you are beginner, I suggest you use [Standard package](https://standardjs.com/). It requires no configuration and is very easy to use.
+
+```
+npm install --save-dev standard
+
+standard --fix
+```
+
+### non-beginner
+
+If you want more customised and advanced configuration, I suggest you look into [Shareable configs](https://eslint.org/docs/latest/extend/shareable-configs) and [plugins](https://eslint.org/docs/latest/use/configure/plugins)
+
+#### Shareable configs
+
+> Shareable configs are simply npm packages that export a configuration object.
+
+Shareable configurations are predefined sets of ESLint rules and settings that can be shared and reused across multiple projects.You can create your own share configuration, or use publically available configurations.
+
+- If you use `prettier` in your project, [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
+- You can also look into airbnb config, which is very solid standard [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+
+#### Plugins
+
+ESLint plugins are third-party packages that provide additional rules and functionality for ESLint. They are typically created to address specific use cases, coding standards, or libraries.
+
+You can refer to list of awesome eslint plugins [here](https://github.com/dustinspecker/awesome-eslint)
+
+IMHO, You can use whatever plugins as long as it helps your productivity and consistency of the code quality.
+
+Too many plugins can cause confusions and change of standard through iterations. So be careful when you want to add a plugin to your project.
+
+#### Pre-commit hook
+
+> You can use Prettier with a pre-commit tool. This can re-format your files that are marked as “staged” via git add before you commit.
+
+You can setup pre commit hook with prettier. This will ensure that your code will always be following the defined style guide in your project.
+
+For guide on how to set up in your project, refer to [Setup](https://prettier.io/docs/en/precommit)
